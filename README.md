@@ -116,11 +116,11 @@ There is a variety of examples that can be found in the [UnitTests](https://gith
 
 ## Screenshots
 ###### Report Example
-![Screenshot 0](docs/Resources/Images/Documentation/Screenshot0.jpg)
+![Screenshot 0](docs/Resources/Images/Documentation/screen.jpg)
 
 ###### UI
-![Screenshot 1](docs/Resources/Images/Documentation/Screenshot1.jpg)
-![Screenshot 2](docs/Resources/Images/Documentation/Screenshot2.jpg)
+![Screenshot 1](docs/Resources/Images/Documentation/screen.jpg)
+![Screenshot 2](docs/Resources/Images/Documentation/screen.jpg)
 
 ## Feedback
 - Ask a question on [Discord](https://discordapp.com/invite/4MHvGwp).
