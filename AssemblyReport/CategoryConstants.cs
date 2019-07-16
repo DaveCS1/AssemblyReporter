@@ -15,7 +15,7 @@
 
 namespace AssemblyReport
 {
-    ///// <summary>The <see cref="CategoryConstants"/> class.</summary>
+    /// <summary>The <see cref="CategoryConstants"/> class.</summary>
     public static class CategoryConstants
     {
         #region Constants
