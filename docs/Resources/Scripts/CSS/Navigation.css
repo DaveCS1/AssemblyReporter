@@ -1,0 +1,38 @@
+#navigationBar {
+    display: block;
+    width: 100%;
+}
+
+.navigationBarRight { float: right; }
+
+.navigationBar ul {
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 0;
+    width: auto;
+}
+
+.navigationBar li {
+    float: left;
+    height: 75px;
+    text-decoration: none;
+}
+
+.navigationBar li a {
+    color: white;
+    display: block;
+    margin: 6px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigationBar li a:hover {
+    border-bottom: 3px solid #3194c0;
+    text-shadow: 0 0 1px white;
+}
+
+.navigationItem { display: block; }

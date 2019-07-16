@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AssemblyReport</id>
+    <version>1.0.0</version>
+    <authors>Origin Bytes</authors>
+    <owners>Origin Bytes</owners>
+    <license type="expression">GPL-3.0-only</license>
+    <projectUrl>https://darkbyte7.github.io/AssemblyReporter/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/DarkByte7/AssemblyReporter/master/docs/Resources/Images/Misc/FavIcon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Assembly Report generates Assembly API documentation reports with ease.</description>
+    <releaseNotes>https://github.com/DarkByte7/AssemblyReporter/releases</releaseNotes>
+    <copyright>Copyright 2018 - 2019</copyright>
+    <tags>assembly report net net-extensions interop framework interoperability components extensions shell user-interface development runtime library windows reporting markdown</tags>
+    <repository type="Git" url="https://github.com/DarkByte7/AssemblyReporter" />
+  </metadata>
+      <files>
+      <file src="..\LICENSE.md" target="lib\NET4\1.0.0\LICENSE.md"></file>
+      <file src="..\README.md" target="lib\NET4\1.0.0\README.md"></file>
+      <file src="..\AssemblyReport\bin\Release\AssemblyReport.dll" target="lib\NET4\1.0.0\AssemblyReport.dll"></file>
+    </files>
+</package>

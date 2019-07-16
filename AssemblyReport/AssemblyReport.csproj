@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8700B723-D6FD-4B35-A4D7-82D9DE3BFEEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssemblyReport</RootNamespace>
+    <AssemblyName>AssemblyReport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\AssemblyReport.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\ICO\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enumerators\MemberInfoTypes.cs" />
+    <Compile Include="Extensibility\AsmExtensions.cs" />
+    <Compile Include="Extensibility\DocumentationExtensions.cs" />
+    <Compile Include="Extensibility\Extensions.cs" />
+    <Compile Include="Extensibility\ListExtensions.cs" />
+    <Compile Include="Extensibility\ReflectionExtensions.cs" />
+    <Compile Include="Extensibility\TypeExtensions.cs" />
+    <Compile Include="InteropServices\ExternalDll.cs" />
+    <Compile Include="InteropServices\Functions\Kernel32.cs" />
+    <Compile Include="InteropServices\Functions\Shell32.cs" />
+    <Compile Include="InteropServices\Functions\User32.cs" />
+    <Compile Include="Primitives\AssemblyScope\AssemblyScope.cs" />
+    <Compile Include="Primitives\AssemblyAnalyzer\AssemblyAnalyzer.cs" />
+    <Compile Include="Primitives\AssemblyAnalyzer\IAssemblyAnalyzer.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\ParameterGenerator.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\EventGenerator.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\PropertyGenerator.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\SummaryGenerator.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\DescriptionGeneratorBase.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\ConstructorGenerator.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\GenerationProviders\MethodGenerator.cs" />
+    <Compile Include="Primitives\GeneratorDescriptor.cs" />
+    <Compile Include="Primitives\ParamInfo.cs" />
+    <Compile Include="Primitives\HierarchyTree\HierarchyTree.cs" />
+    <Compile Include="Primitives\HierarchyTree\IHierarchyTree.cs" />
+    <Compile Include="Primitives\AssemblyAnalyzer\AssemblyLoader.cs" />
+    <Compile Include="Primitives\AssemblyHierarchy\HierarchyNode.cs" />
+    <Compile Include="Primitives\AssemblyHierarchy\IHierarchyNode.cs" />
+    <Compile Include="Extensibility\NodeExtensions.cs" />
+    <Compile Include="Primitives\AssemblyPropertiesInfo.cs" />
+    <Compile Include="Primitives\BlackListedElements\BlackListedElements.cs" />
+    <Compile Include="Primitives\BlackListedElements\IBlacklistElements.cs" />
+    <Compile Include="Primitives\DescriptionGenerator\DescriptionGenerator.cs" />
+    <Compile Include="Primitives\AssemblyScope\IAssemblyScope.cs" />
+    <Compile Include="Primitives\IconExtractor.cs" />
+    <Compile Include="Primitives\Namespace\NamespaceScope\INamespaceScope.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownElement.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownEmphasis.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownHeader.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownImage.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownTypeId.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownReference.cs" />
+    <Compile Include="Primitives\Markdown\Elements\MarkdownTable.cs" />
+    <Compile Include="Primitives\Namespace\NamespaceData\INamespaceData.cs" />
+    <Compile Include="Primitives\Namespace\NamespaceData\NamespaceData.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UITypeEditor\StringListConverter.cs" />
+    <Compile Include="UserControls\DescriptionGeneratorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DescriptionGeneratorControl.Designer.cs">
+      <DependentUpon>DescriptionGeneratorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\PropertyGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\PropertyGenerationPage.Designer.cs">
+      <DependentUpon>PropertyGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\EventGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\EventGenerationPage.Designer.cs">
+      <DependentUpon>EventGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\FieldGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\FieldGenerationPage.Designer.cs">
+      <DependentUpon>FieldGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\MethodGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\MethodGenerationPage.Designer.cs">
+      <DependentUpon>MethodGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\StructureGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\StructureGenerationPage.Designer.cs">
+      <DependentUpon>StructureGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\InterfaceGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\InterfaceGenerationPage.Designer.cs">
+      <DependentUpon>InterfaceGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\EnumGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\EnumGenerationPage.Designer.cs">
+      <DependentUpon>EnumGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\DelegateGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\DelegateGenerationPage.Designer.cs">
+      <DependentUpon>DelegateGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\ClassGenerationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeneratorPages\ClassGenerationPage.Designer.cs">
+      <DependentUpon>ClassGenerationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParameterInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParameterInformationDialog.Designer.cs">
+      <DependentUpon>ParameterInformationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MarkdownPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MarkdownPreview.Designer.cs">
+      <DependentUpon>MarkdownPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ParameterEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ParameterEditorControl.Designer.cs">
+      <DependentUpon>ParameterEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\HtmlUtil.cs" />
+    <Compile Include="Primitives\Markdown\MarkdownBase.cs" />
+    <Compile Include="Primitives\Markdown\MarkdownReport.cs" />
+    <Compile Include="Primitives\Markdown\MarkdownSettings.cs" />
+    <Compile Include="Primitives\Node.cs" />
+    <Compile Include="CategoryConstants.cs" />
+    <Compile Include="Primitives\ReportSettings.cs" />
+    <Compile Include="Primitives\ResourceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UITypeEditor\FilePathEditor.cs" />
+    <Compile Include="UITypeEditor\DirectoryPathEditor.cs" />
+    <Compile Include="UITypeEditor\BasePathEditor.cs" />
+    <Compile Include="Utilities\AsmUtil.cs" />
+    <Compile Include="Utilities\ControlUtil.cs" />
+    <Compile Include="Utilities\FileUtil.cs" />
+    <Compile Include="Utilities\ImageUtil.cs" />
+    <Compile Include="Primitives\Namespace\NamespaceScope\NamespaceScope.cs" />
+    <Compile Include="Utilities\ResourceUtils.cs" />
+    <Compile Include="Utilities\TextUtil.cs" />
+    <Compile Include="Utilities\TypesUtil.cs" />
+    <Compile Include="Utilities\XMLUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DescriptionGeneratorControl.resx">
+      <DependentUpon>DescriptionGeneratorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\PropertyGenerationPage.resx">
+      <DependentUpon>PropertyGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\EventGenerationPage.resx">
+      <DependentUpon>EventGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\FieldGenerationPage.resx">
+      <DependentUpon>FieldGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\MethodGenerationPage.resx">
+      <DependentUpon>MethodGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\StructureGenerationPage.resx">
+      <DependentUpon>StructureGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\InterfaceGenerationPage.resx">
+      <DependentUpon>InterfaceGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\EnumGenerationPage.resx">
+      <DependentUpon>EnumGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\DelegateGenerationPage.resx">
+      <DependentUpon>DelegateGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GeneratorPages\ClassGenerationPage.resx">
+      <DependentUpon>ClassGenerationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParameterInformationDialog.resx">
+      <DependentUpon>ParameterInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MarkdownPreview.resx">
+      <DependentUpon>MarkdownPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ParameterEditorControl.resx">
+      <DependentUpon>ParameterEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Constructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Delegate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Enumerator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\NameSpace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Structure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\ICO\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Solution.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\ResourceXml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\PNG\Add.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
