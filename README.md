@@ -109,9 +109,7 @@ If you are interested in fixing issues and contributing directly to the code bas
 ###### Dependency's references depend on which assemblies are referenced for use.
 | Name | Version | Website
 | :---: | :---: | :---: |
-| .NET Standard | 2.0 | [Download](https://www.nuget.org/packages/NETStandard.Library "Download: .NET Standard") |
-| .NET Core | 2.0, 2.2.5 | [Download](https://dotnet.microsoft.com/download/dotnet-core  "Download: .NET Core") |
-| .NET Framework | 4.5 | [Download](https://dotnet.microsoft.com/download/dotnet-framework  "Download: .NET Framework") |
+| .NET Framework | 4.0 | [Download](https://dotnet.microsoft.com/download/dotnet-framework  "Download: .NET Framework") |
 
 ## API Sample Code
 There is a variety of examples that can be found in the [UnitTests](https://github.com/DarkByte7/AssemblyReporter/tree/master/UnitTests) folder.
