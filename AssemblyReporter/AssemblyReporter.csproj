@@ -131,7 +131,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>DEL /F /Q "G:\Cloud Storage\OneDrive\Repository\Development\Websites\Package Bay\NuGetPackages\$(SolutionName)\*"
-XCOPY /E /I "$(SolutionDir)\.nuget\Packages" "G:\Cloud Storage\OneDrive\Repository\Development\Websites\Package Bay\NuGetPackages\$(SolutionName)\*" /F /Y</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
