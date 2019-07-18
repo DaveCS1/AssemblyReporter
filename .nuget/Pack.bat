@@ -31,6 +31,8 @@ SET WORKING_DIRECTORY=%cd%
 REM Window Title
 SET CONSOLE_TITLE=NuGet Packer
 
+SET PACKAGE_OUTPUT="Packages"
+
 REM Initialize
 :MAIN_ENTRY_POINT
     TITLE %CONSOLE_TITLE%
@@ -45,15 +47,15 @@ REM Initialize
     ECHO.
     ECHO This wizard will guide you though the packing process of a NuGet package.
     ECHO.
-
     ECHO Creating the package...
     CALL %NuGet% pack AssemblyReport.nuspec
-
     ECHO.
     ECHO Moving all NuGet packages to store in the packages folder.
     ECHO.
-    MOVE /Y *.nupkg Packages
-
+    MD %PACKAGE_OUTPUT%
+    ECHO.
+    MOVE /Y *.nupkg %PACKAGE_OUTPUT%
+    ECHO.
     ECHO Press any Key to exit...
     PAUSE >NUL
 
