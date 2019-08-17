@@ -119,8 +119,8 @@ There is a variety of examples that can be found in the [UnitTests](https://gith
 ![Screenshot 0](docs/Resources/Images/Documentation/screen.jpg)
 
 ###### UI
-![Screenshot 1](docs/Resources/Images/Documentation/screen.jpg)
-![Screenshot 2](docs/Resources/Images/Documentation/screen.jpg)
+![Screenshot 1](docs/Resources/Images/Documentation/screen1.jpg)
+![Screenshot 2](docs/Resources/Images/Documentation/screen2.jpg)
 
 ## Feedback
 - Ask a question on [Discord](https://discordapp.com/invite/4MHvGwp).
